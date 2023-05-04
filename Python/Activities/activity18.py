@@ -1,0 +1,15 @@
+import pandas
+print("username row")
+full_data=pandas.read_csv("Credentials.csv")
+data = pandas.read_csv("Credentials.csv", usecols=["Usernames"])
+print(data)
+print("SECOND ROW DETAILS")
+data_2row = pandas.read_csv("Credentials.csv")
+details_2row =data_2row.iloc[1]
+print(details_2row)
+print("ASCENDING ORDER")
+Ascending_order =full_data.sort_values("Usernames")
+print(Ascending_order)
+print("Descending ORDER")
+Descending_order =full_data.sort_values("Usernames",ascending=False)
+print(Ascending_order)
